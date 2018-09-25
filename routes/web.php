@@ -16,8 +16,10 @@ Route::get('/', function () {
 });
 
  Route::get('index', 'ControllerView@index')->name('showindex');
-
  Route::get('productdetail', 'ControllerView@productdetail')->name('showproductdetail');
+ Route::get('beli', 'ControllerView@beli')->name('showbeli');
+ Route::get('daftar', 'ControllerView@daftar')->name('showdaftar');
+ Route::get('masuka', 'ControllerView@masuk')->name('showmasuk');
 
  //penjelasan
 //index = nama yang buat di panggil atau di ketik di browser

@@ -24,61 +24,61 @@
             </div>
             <div class="col-lg-3">
             	<h4>Game anak 2</h4>
-               <img src="{{ url('uploads/gambar1.jpg') }}" style="width: 75px; height: 75px;"/>
-               <p>sehari bersama Acel</p>
+               <img src="{{ url('uploads/gambar2.png') }}" style="width: 75px; height: 75px;"/>
+               <p>sehari bersama Acel anak cerdas</p>
                <br>Rp. 50.000
 
-                 <button type="submit" class="btn btn-default">Beli</button>
+                 <a href="{{route('showproductdetail')}}"><button type="button" class="btn btn-default" ><i class="fa fa-plus"></i> Detail</button></a>
                
             </div>
             <div class="col-lg-3">
                    <h4>Game anak 3</h4>
-               <img src="{{ url('uploads/gambar1.jpg') }}" style="width: 75px; height: 75px;"/>
-               <p>sehari bersama Acel</p>
+               <img src="{{ url('uploads/gambar3.png') }}" style="width: 75px; height: 75px;"/>
+               <p>Amy & jimmy menjelajah rumah</p>
                <br>Rp. 50.000
 
-                 <button type="submit" class="btn btn-default">Beli</button>
+                 <button type="submit" class="btn btn-default">Detail</button>
             </div>
                 <div class="col-lg-3">
                   <h4>Game anak 4</h4>
-               <img src="{{ url('uploads/gambar1.jpg') }}" style="width: 75px; height: 75px;"/>
-               <p>sehari bersama Acel</p>
+               <img src="{{ url('uploads/gambar4.png') }}" style="width: 75px; height: 75px;"/>
+               <p>anak cerdas latihan dirumah</p>
                <br>Rp. 50.000
 
-                 <button type="submit" class="btn btn-default">Beli</button>
+                 <button type="submit" class="btn btn-default">Detail</button>
             </div>
         </div>   <div class="row">
             <div class="col-lg-3">
                    <h4>Game anak 5</h4>
-               <img src="{{ url('uploads/gambar1.jpg') }}" style="width: 75px; height: 75px;"/>
-               <p>sehari bersama Acel</p>
+               <img src="{{ url('uploads/gambar5.jpg') }}" style="width: 75px; height: 75px;"/>
+               <p>beranda anak</p>
                <br>Rp. 50.000
 
-                 <button type="submit" class="btn btn-default">Beli</button>
+                 <button type="submit" class="btn btn-default">Detail</button>
             </div>
             <div class="col-lg-3">
                    <h4>Game anak 6</h4>
-               <img src="{{ url('uploads/gambar1.jpg') }}" style="width: 75px; height: 75px;"/>
-               <p>sehari bersama Acel</p>
+               <img src="{{ url('uploads/gambar6.jpg') }}" style="width: 75px; height: 75px;"/>
+               <p>anak mandiri aku baik banget</p>
                <br>Rp. 50.000
 
-                 <button type="submit" class="btn btn-default">Beli</button>
+                 <button type="submit" class="btn btn-default">Detail</button>
             </div>
             <div class="col-lg-3">
                 <h4>Game anak 7</h4>
-               <img src="{{ url('uploads/gambar1.jpg') }}" style="width: 75px; height: 75px;"/>
-               <p>sehari bersama Acel</p>
+               <img src="{{ url('uploads/gambar7.jpg') }}" style="width: 75px; height: 75px;"/>
+               <p>cermatika</p>
                <br>Rp. 50.000
 
-                 <button type="submit" class="btn btn-default">Beli</button>
+                 <button type="submit" class="btn btn-default">Detail</button>
             </div>
                 <div class="col-lg-3">
                 <h4>Game anak 8</h4>
-               <img src="{{ url('uploads/gambar1.jpg') }}" style="width: 75px; height: 75px;"/>
-               <p>sehari bersama Acel</p>
+               <img src="{{ url('uploads/gambar8.jpg') }}" style="width: 75px; height: 75px;"/>
+               <p>belanja cerdas untuk anak</p>
                <br>Rp. 50.000
 
-                 <button type="submit" class="btn btn-default" href="#">Beli</button>
+                 <button type="submit" class="btn btn-default" href="#">Detail</button>
             </div>
         </div> 
 

@@ -20,5 +20,20 @@ class ControllerView extends Controller
 
     	  return view($page);
     }
+    public function beli()
+    {
+        $page ='beli';
+        return view($page);
+    }
+    public function daftar()
+    {
+        $page = 'daftar';
+        return view($page);
+    }
+    public function masuk()
+    {
+        $page ='masuk';
+        return view($page);
+    }
 
 }
