@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 class ControllerView extends Controller
 {
-    
+
     public function index()
     {
-    	$page = 'index';//nama view atau blade yg tadi dibuat
+    	$page = 'Index';//nama view atau blade yg tadi dibuat
 
     	  return view($page);
     }

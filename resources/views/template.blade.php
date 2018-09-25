@@ -28,8 +28,8 @@
  <button type="submit" class="btn btn-default">Cari</button>
  </form>
  <ul class="nav navbar-nav navbar-right">
- <li><a href="#">Daftar</a></li>
-  <li><a href="#">Masuk</a></li>
+ <li><a href="{{route('showdaftar')}}">Daftar</a></li>
+  <li><a href="{{route('showmasuk')}}">Masuk</a></li>
  </ul>
  </li>
  </ul>
