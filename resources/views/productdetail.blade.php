@@ -12,15 +12,9 @@
 </head>
 <body>
   <div class="body-content">
-
         <div class="row">
-            <div class="col-lg-6">
-               
-               <img src="{{ url('uploads/gambar1.jpg') }}" style="width: 200px; height: 200px;"/>
-               
-               
-
-               
+            <div class="col-lg-6"> 
+               <img src="{{ url('uploads/gambar1.jpg') }}" style="width: 200px; height: 200px;"/>  
             </div>
             <div class="col-lg-6">
               <h4>Game anak 1</h4>
@@ -28,7 +22,6 @@
               <p>Rp.50.000</P> 
                 <button type="submit" class="btn btn-default">Tambah keranjang</button>
                <button type="submit" class="btn btn-default">Beli</button>
-
             </div>
            </div>
          </div>
