@@ -6,10 +6,11 @@ use Illuminate\Http\Request;
 
 class ControllerCustomer extends Controller
 {
-    public function register()
+    public function register(Request $request)
     {
       $data = new Customer();
             $data->nama = $request->input('nama');
+            $data->email = $request->input('jenis_kelamin');
             $data->email = $request->input('email');
             $data->password = $request->input('password');
             $data->konfirmasi_password = $request->('konfirmasi_password')

@@ -17,7 +17,8 @@
       <div class="col-md-6 col-md-offset-3">
         <center><h2>Daftar</h2></center>
         <hr>
-        <form action="{{route('actionRegister')}}" class="form-horizontal" method="POST">
+        <form action="{{route('createCustomer')}}" enctype="multipart/form-data" class="form-horizontal" method="POST">
+          {{ csrf_field() }}
           <div class="form-group">
             <label class="control-label col-xs-3 for ="nama">Nama</label>
             <div class="col-xs-9">
