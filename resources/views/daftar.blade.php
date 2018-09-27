@@ -17,50 +17,50 @@
       <div class="col-md-6 col-md-offset-3">
         <center><h2>Daftar</h2></center>
         <hr>
-        <form action="{{route('createCustomer')}}" enctype="multipart/form-data" class="form-horizontal" method="POST">
+        <form action="{{route('register')}}" enctype="multipart/form-data" class="form-horizontal" method="POST">
           {{ csrf_field() }}
           <div class="form-group">
-            <label class="control-label col-xs-3 for ="nama">Nama</label>
+            <label class="control-label col-xs-3 for ="text-input">Nama</label>
             <div class="col-xs-9">
-                <input type="text" class="form-control" name="nama" placeholder="Masukkan nama lengkap">
+                <input type="text" id="nama" class="form-control" name="nama" placeholder="Masukkan nama lengkap">
             </div>
           </div>
 
            <div class="form-group">
-            <label class="control-label col-xs-3">Jenis Kelamin</label>
+            <label class="control-label col-xs-3" for ="text-input">Jenis Kelamin</label>
             <div class="col-xs-2">
               <label class="radio-inline">
-                  <input type="radio" name="Perempuan" value="Perempuan"> Perempuan
+                  <input type="radio"  id="jenis_kelamin" name="jenis_kelamin" value="Perempuan"> Perempuan
               </label>
             </div>  
             <div class="col-xs-2">
               <label class="radio-inline">
-                  <input type="radio" name="Laki-Laki" value="Laki-Laki"> Laki-Laki
+                  <input type="radio" id="jenis_kelamin" name="jenis_kelamin" value="Laki-Laki"> Laki-Laki
               </label>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="control-label col-xs-3" for="email">Email</label>
+            <label class="control-label col-xs-3" for="text-input">Email</label>
             <div class="col-xs-9">
-              <input type="text" class="form-control" name="email" placeholder="Masukkan email">
+              <input type="text" id="email" class="form-control" name="email" placeholder="Masukkan email">
             </div>
           </div>
           <div class="form-group">
-            <label class="control-label col-xs-3" for="password">Password</label>
+            <label class="control-label col-xs-3" for="text-input">Password</label>
             <div class="col-xs-9">
-              <input type="password" class="form-control" name="password" placeholder="Masukkan password">
+              <input type="password" id="password" class="form-control" name="password" placeholder="Masukkan password">
             </div>
           </div>
           <div class="form-group">
-            <label class="control-label col-xs-3" for="konfirmasi_password">Konfirmasi password</label>
+            <label class="control-label col-xs-3" for="text-input">Konfirmasi password</label>
             <div class="col-xs-9">
-              <input type="password" class="form-control" name="konfirmasi_password" placeholder="Masukkan konfirmasi password">
+              <input type="password" id="konfirmasi_password" class="form-control" name="konfirmasi_password" placeholder="Masukkan konfirmasi password">
             </div>
           </div>
           <div class="form-group">
             <div class="col-xs-offset col-xs-9">
-                <center><button type="button" class="btn btn-default" ><i class="fa fa-plus"></i>Daftar</button></center>
+                <center><button type="submit" class="btn btn-default" ><i class="fa fa-plus"></i>Daftar</button></center>
             </div>
           </div>
         </form>

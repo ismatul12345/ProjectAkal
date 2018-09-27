@@ -3,14 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Customer;
 
 class ControllerCustomer extends Controller
 {
     public function register(Request $request)
     {
+        $this->validate($request, [
+          'nama'   => 'required',
+          'jenis_kelamin'   => 'required',
+          'email' => 'required',
+          'password' => 'required',
+          'konfirmasi_password' => 'required'        ]);
+
       $data = new Customer();
             $data->nama = $request->input('nama');
-            $data->email = $request->input('jenis_kelamin');
+            $data->jenis_kelamin = $request->input('jenis_kelamin');
             $data->email = $request->input('email');
             $data->password = $request->input('password');
             $data->konfirmasi_password = $request->('konfirmasi_password')
