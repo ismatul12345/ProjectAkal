@@ -17,7 +17,7 @@
       <div class="col-md-6 col-md-offset-3">
         <center><h2>Daftar</h2></center>
         <hr>
-        <form action="{{route('register')}}" enctype="multipart/form-data" class="form-horizontal" method="POST">
+        <form action="{{route('daftar')}}" enctype="multipart/form-data" class="form-horizontal" method="POST">
           {{ csrf_field() }}
           <div class="form-group">
             <label class="control-label col-xs-3 for ="text-input">Nama</label>
@@ -32,7 +32,7 @@
               <label class="radio-inline">
                   <input type="radio"  id="jenis_kelamin" name="jenis_kelamin" value="Perempuan"> Perempuan
               </label>
-            </div>  
+            </div>
             <div class="col-xs-2">
               <label class="radio-inline">
                   <input type="radio" id="jenis_kelamin" name="jenis_kelamin" value="Laki-Laki"> Laki-Laki

@@ -19,6 +19,7 @@ class CreateCustomerTable extends Migration
             $table->string('jenis_kelamin');
             $table->string('email');
             $table->string('password');
+            $table->string('konfirmasi_password');
             $table->timestamps();
         });
     }

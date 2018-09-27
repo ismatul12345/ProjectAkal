@@ -16,22 +16,23 @@
       <div class="col-md-6 col-md-offset-3">
         <center><h2>Masuk</h2></center>
         <hr>
-        <form action="{{route('actionLogin')}}"class="form-horizontal" method="POST">
+        <form action="{{route('masuk')}}" enctype="multipart/form-data" class="form-horizontal" method="POST">
+            {{ csrf_field() }}
           <div class="form-group">
-            <label class="control-label col-xs-3" for="email">Email</label>
+            <label class="control-label col-xs-3" for="text-input">Email</label>
             <div class="col-xs-9">
-              <input type="text" class="form-control" name="email" placeholder="Masukkan email">
+              <input type="text" id="email" class="form-control" name="email" placeholder="Masukkan email">
             </div>
           </div>
           <div class="form-group">
-            <label class="control-label col-xs-3" for="password">Password</label>
+            <label class="control-label col-xs-3" for="text-input">Password</label>
             <div class="col-xs-9">
-              <input type="password" class="form-control" name="password" placeholder="Masukkan password">
+              <input type="password" id="password" class="form-control" name="password" placeholder="Masukkan password">
             </div>
           </div>
           <div class="form-group">
             <div class="col-xs-offset col-xs-9">
-            <center><button type="button" class="btn btn-default" ><i class="fa fa-plus"></i>Masuk</button></center>
+            <center><button type="submit" class="btn btn-default" ><i class="fa fa-plus"></i>Masuk</button></center>
             </div>
           </div>
         </form>
