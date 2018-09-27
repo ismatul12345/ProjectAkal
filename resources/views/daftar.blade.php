@@ -24,6 +24,7 @@
                 <input type="text" class="form-control" name="nama" placeholder="Masukkan nama lengkap">
             </div>
           </div>
+
          
           <div class="form-group">
             <label class="control-label col-xs-3" for="email">Email</label>
