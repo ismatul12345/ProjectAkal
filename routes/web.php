@@ -20,7 +20,8 @@ Route::get('/', function () {
  Route::get('beli', 'ControllerView@beli')->name('showbeli');
  Route::get('daftar', 'ControllerView@daftar')->name('showdaftar');
  Route::get('masuk', 'ControllerView@masuk')->name('showmasuk');
-
+ Rooute::post('register','ControllerCustomer@register')->name('actionRegister');
+ Route::post('login','ControllerCustomer@doLogin')->name('actionLogin');
  //penjelasan
 //index = nama yang buat di panggil atau di ketik di browser
  //ControllerView = nama Controllernya

@@ -17,25 +17,25 @@
       <div class="col-md-6 col-md-offset-3">
         <center><h2>Daftar</h2></center>
         <hr>
-        <form class="form-horizontal" method="POST">
+        <form action="{{route('actionRegister')}}" class="form-horizontal" method="POST">
           <div class="form-group">
             <label class="control-label col-xs-3 for ="nama">Nama</label>
             <div class="col-xs-9">
                 <input type="text" class="form-control" name="nama" placeholder="Masukkan nama lengkap">
             </div>
           </div>
-         
+
           <div class="form-group">
             <label class="control-label col-xs-3" for="email">Email</label>
             <div class="col-xs-9">
               <input type="text" class="form-control" name="email" placeholder="Masukkan email">
-            </div>  
+            </div>
           </div>
           <div class="form-group">
             <label class="control-label col-xs-3" for="password">Password</label>
             <div class="col-xs-9">
               <input type="password" class="form-control" name="password" placeholder="Masukkan password">
-            </div>  
+            </div>
           </div>
           <div class="form-group">
             <label class="control-label col-xs-3" for="konfirmasi_password">Konfirmasi password</label>
