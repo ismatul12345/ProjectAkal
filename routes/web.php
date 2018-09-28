@@ -35,6 +35,4 @@ Route::get('daftar', 'ControllerView@daftar')->name('showdaftar');
 Route::get('masuk', 'ControllerView@masuk')->name('showmasuk');
  Route::post('register', 'ControllerCustomer@daftar')->name('daftar');
  Route::post('login', 'ControllerCustomer@doLogin')->name('masuk');
-Route::get('my-captcha', 'HomeController@myCaptcha')->name('myCaptcha');
-Route::post('my-captcha', 'HomeController@CaptchaPost')->name('myCaptcha.post');
-Route::get('refresh_captcha', 'HomeController@refreshCaptcha')->name('refresh_captcha');
+Route::get('refresh_captcha', 'ControllerCustomer@refreshCaptcha')->name('refresh_captcha');

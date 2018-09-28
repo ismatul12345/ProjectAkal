@@ -3,6 +3,7 @@
 <!doctype html>
 
 <head>
+  <title>PT Akal Interaktif</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -50,6 +51,7 @@
             <label class="control-label col-xs-3" for="text-input">Password</label>
             <div class="col-xs-9">
               <input type="password" id="password" class="form-control" name="password" placeholder="Masukkan password" required>
+              <p>( * Minimal 6 karakter )</P>
             </div>
           </div>
           <div class="form-group">
@@ -60,7 +62,7 @@
           </div>
           <div class="form-group">
             <div class="col-xs-offset col-xs-9">
-                <center><button type="submit" class="btn btn-default" id="btnSubmit" ><i class="fa fa-plus"></i>Daftar</button></center>
+                <center><button type="submit" class="btn btn-success btn-sm" id="btnSubmit" ><i class="fa fa-plus"></i>Daftar</button></center>
             </div>
           </div>
         </form>

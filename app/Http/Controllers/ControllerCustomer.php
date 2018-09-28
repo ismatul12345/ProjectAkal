@@ -12,26 +12,30 @@ class ControllerCustomer extends Controller
         $this->validate($request, [
           'nama'   => 'required',
           'jenis_kelamin'   => 'required',
-          'email' => 'required',
-          'password' => 'required',
+          'email' => 'required|email',
+          'password' => 'required|min:6',
           'konfirmasi_password' => 'required'        ]);
 
       $data = new Customer();
-            $data->nama = $request->input('nama');
-            $data->jenis_kelamin = $request->input('jenis_kelamin');
-            $data->email = $request->input('email');
-            $data->password = $request->input('password');
-            $data->konfirmasi_password = $request->input('konfirmasi_password');
+            $data->nama = $request->get('nama');
+            $data->jenis_kelamin = $request->get('jenis_kelamin');
+            $data->email = $request->get('email');
+            $data->password = $request->get('password');
+            $data->konfirmasi_password = $request->get('konfirmasi_password');
             $data->save();
             return redirect()->route('showindex')->with('alert-success','Data berhasil ditambahkan!');
     }
 
       public function doLogin(Request $request)
       {
-        $this->validate($request, [
-        $email = $request->input('email'),
-        $password = $request->input('password')
-        ]);
+        request()->validate([
+          'email' => 'required|email',
+          'password'=> 'required',
+          'captcha' => 'required|captcha' ],
+        ['captcha.captcha' => 'Invalid captcha code.']);
+        $email =  $request->get('email');
+        $password = $request->get('password');
+
         $data = Customer::where('email', $email)
             ->where('password', $password)->get();
       if(count($data) > 0){
@@ -41,6 +45,11 @@ class ControllerCustomer extends Controller
       else{
         return back()->with('alert', 'Wrong login details');
       }
+    }
+
+    public function refreshCaptcha()
+    {
+      return response()->json(['captcha'=> captcha_img()]);
     }
 
     public function logout(Request $request){
@@ -55,23 +64,5 @@ class ControllerCustomer extends Controller
         return Auth::guard();
     }
 
-    public function myCaptcha()
-    {
-      return view('myCaptcha');
-    }
-    public function myCaptchaPost(Request $request)
-    {
-      request()->validate([
-        'email' => 'required|email',
-        'password'=> 'required'
-        'captcha' => 'required|captcha'
-      ],
-      ['captcha.captcha' => 'Invalid captcha code.']);
-      dd("You are here: .");
-    }
-    public function refreshCaptcha()
-    {
-      return response()->json(['captcha'=> captcha_img()]);
-    }
 
 }
