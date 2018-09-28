@@ -6,11 +6,16 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 
 
 </head>
 <body>
+
+
 <div class="constainer">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
@@ -35,11 +40,50 @@
             <center><button type="submit" class="btn btn-default" ><i class="fa fa-plus"></i>Masuk</button></center>
             </div>
           </div>
+
+          <div class="form-group">
+
+                      <div class="col-md-8 col-md-offset-4">
+
+                          <button type="submit" class="btn btn-primary">
+
+                              Submit
+
+                          </button>
+
+                      </div>
+
+                  </div>
         </form>
       </div>
     </div>
   </div>
 </body>
+
+<script type="text/javascript">
+
+
+$(".btn-refresh").click(function(){
+
+  $.ajax({
+
+     type:'GET',
+
+     url:'/refresh_captcha',
+
+     success:function(data){
+
+        $(".captcha span").html(data.captcha);
+
+     }
+
+  });
+
+});
+
+
+</script>
+
 @endsection
 @section('footer')
  <h4>PT Akal Interaktif</h4>

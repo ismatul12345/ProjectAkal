@@ -55,4 +55,23 @@ class ControllerCustomer extends Controller
         return Auth::guard();
     }
 
+    public function myCaptcha()
+    {
+      return view('myCaptcha');
+    }
+    public function myCaptchaPost(Request $request)
+    {
+      request()->validate([
+        'email' => 'required|email',
+        'password'=> 'required'
+        'captcha' => 'required|captcha'
+      ],
+      ['captcha.captcha' => 'Invalid captcha code.']);
+      dd("You are here: .");
+    }
+    public function refreshCaptcha()
+    {
+      return response()->json(['captcha'=> captcha_img()]);
+    }
+
 }

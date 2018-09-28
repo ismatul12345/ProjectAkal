@@ -22,7 +22,7 @@
           <div class="form-group">
             <label class="control-label col-xs-3 for ="text-input">Nama</label>
             <div class="col-xs-9">
-                <input type="text" id="nama" class="form-control" name="nama" placeholder="Masukkan nama lengkap">
+                <input type="text" id="nama" class="form-control" name="nama" placeholder="Masukkan nama lengkap" required>
             </div>
           </div>
 
@@ -30,12 +30,12 @@
             <label class="control-label col-xs-3" for ="text-input">Jenis Kelamin</label>
             <div class="col-xs-2">
               <label class="radio-inline">
-                  <input type="radio"  id="jenis_kelamin" name="jenis_kelamin" value="Perempuan"> Perempuan
+                  <input type="radio"  id="jenis_kelamin" name="jenis_kelamin" value="Perempuan" required> Perempuan
               </label>
             </div>
             <div class="col-xs-2">
               <label class="radio-inline">
-                  <input type="radio" id="jenis_kelamin" name="jenis_kelamin" value="Laki-Laki"> Laki-Laki
+                  <input type="radio" id="jenis_kelamin" name="jenis_kelamin" value="Laki-Laki" required> Laki-Laki
               </label>
             </div>
           </div>
@@ -43,24 +43,24 @@
           <div class="form-group">
             <label class="control-label col-xs-3" for="text-input">Email</label>
             <div class="col-xs-9">
-              <input type="text" id="email" class="form-control" name="email" placeholder="Masukkan email">
+              <input type="text" id="email" class="form-control" name="email" placeholder="Masukkan email" required>
             </div>
           </div>
           <div class="form-group">
             <label class="control-label col-xs-3" for="text-input">Password</label>
             <div class="col-xs-9">
-              <input type="password" id="password" class="form-control" name="password" placeholder="Masukkan password">
+              <input type="password" id="password" class="form-control" name="password" placeholder="Masukkan password" required>
             </div>
           </div>
           <div class="form-group">
             <label class="control-label col-xs-3" for="text-input">Konfirmasi password</label>
             <div class="col-xs-9">
-              <input type="password" id="konfirmasi_password" class="form-control" name="konfirmasi_password" placeholder="Masukkan konfirmasi password">
+              <input type="password" id="konfirmasi_password" class="form-control" name="konfirmasi_password" placeholder="Masukkan konfirmasi password" required >
             </div>
           </div>
           <div class="form-group">
             <div class="col-xs-offset col-xs-9">
-                <center><button type="submit" class="btn btn-default" ><i class="fa fa-plus"></i>Daftar</button></center>
+                <center><button type="submit" class="btn btn-default" id="btnSubmit" ><i class="fa fa-plus"></i>Daftar</button></center>
             </div>
           </div>
         </form>
@@ -68,9 +68,21 @@
     </div>
   </div>
 
-
-
 </body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btnSubmit").click(function () {
+                var password = $("#password").val();
+                var konfirmasi_password = $("#konfirmasi_password").val();
+                if (password != konfirmasi_password) {
+                    alert("Passwords do not match.");
+                    return false;
+                }
+                return true;
+            });
+        });
+    </script>
 @endsection
 @section('footer')
  <h4>PT Akal Interaktif</h4>
