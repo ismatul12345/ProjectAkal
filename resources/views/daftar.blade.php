@@ -35,7 +35,7 @@
             </div>
             <div class="col-xs-2">
               <label class="radio-inline">
-                  <input type="radio" id="jenis_kelamin" name="jenis_kelamin" value="Laki-Laki" required> Laki-Laki
+                  <input type="radio" id="jenis_kelamin" name="jenis_kelamin" value="Laki-Laki" required>laki-laki
               </label>
             </div>
           </div>
