@@ -45,6 +45,15 @@
             <label class="control-label col-xs-3" for="text-input">Email</label>
             <div class="col-xs-9">
               <input type="text" id="email" class="form-control" name="email" placeholder="Masukkan email" required>
+              @if ($errors->has('email'))
+
+                  <span class="help-block">
+
+                      <strong>{{ $errors->first('email') }}</strong>
+
+                  </span>
+
+              @endif
             </div>
           </div>
           <div class="form-group">
