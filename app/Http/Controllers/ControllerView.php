@@ -35,5 +35,10 @@ class ControllerView extends Controller
         $page ='masuk';
         return view($page);
     }
+    public function homePage()
+    {
+        $page ='homepage';
+        return view ($page);
+    }
 
 }
