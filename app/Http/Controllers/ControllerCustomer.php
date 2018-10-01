@@ -39,7 +39,7 @@ class ControllerCustomer extends Controller
         $data = Customer::where('email', $email)// query dengan where jika email yg ada di tabel customer
             ->where('password', $password)->first();// dengan yg di request oleh user sama
       if(count($data) > 0){ //disini di cek ada ngga data yg sama jika ada maka masuk ke route show index
-        return redirect()->route('showindex')->with('alert',  'Login Success');
+        return redirect()->route('showhomepage')->with('alert',  'Login Success');
 
       }
       else{

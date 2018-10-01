@@ -37,3 +37,4 @@ Route::post('register', 'ControllerCustomer@daftar')->name('daftar');
 Route::post('login', 'ControllerCustomer@doLogin')->name('masuk');
 Route::get('refresh_captcha', 'ControllerCustomer@refreshCaptcha')->name('refresh_captcha');
 Route::get('homepage', 'ControllerView@homepage')->name('showhomepage');
+Route::get('detailproductbaru', 'ControllerView@detailproductbaru')->name('detailproductbaru');

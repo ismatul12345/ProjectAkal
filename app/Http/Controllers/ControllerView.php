@@ -40,5 +40,10 @@ class ControllerView extends Controller
         $page ='homepage';
         return view ($page);
     }
+    public function detailproductBaru()
+    {
+        $page='detailproductbaru';
+        return view ($page);
+    }
 
 }

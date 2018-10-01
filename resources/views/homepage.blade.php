@@ -1,4 +1,4 @@
-@extends('template')
+@extends('template1')
 @section('konten')
 <!doctype html>
 
@@ -21,7 +21,7 @@
                <p>sehari bersama Acel</p>
                <br>Rp. 50.000
 
-                 <a href="{{route('showproductdetail')}}"><button type="button" class="btn btn-default" ><i class="fa fa-plus"></i> Detail</button></a>
+                 <a href="{{route('detailproductbaru')}}"><button type="button" class="btn btn-default" ><i class="fa fa-plus"></i> Detail</button></a>
             </div>
             <div class="col-lg-3">
             	<h4>Game anak 2</h4>
@@ -29,7 +29,7 @@
                <p>sehari bersama Acel anak cerdas</p>
                <br>Rp. 50.000
 
-                 <a href="{{route('showproductdetail')}}"><button type="button" class="btn btn-default" ><i class="fa fa-plus"></i> Detail</button></a>
+                 <a href="{{route('detailproductbaru')}}"><button type="button" class="btn btn-default" ><i class="fa fa-plus"></i> Detail</button></a>
 
             </div>
             <div class="col-lg-3">
@@ -38,7 +38,7 @@
                <p>Amy & jimmy menjelajah rumah</p>
                <br>Rp. 50.000
 
-                 <a href="{{route('showproductdetail')}}"><button type="button" class="btn btn-default" ><i class="fa fa-plus"></i> Detail</button></a>
+                 <a href="{{route('detailproductbaru')}}"><button type="button" class="btn btn-default" ><i class="fa fa-plus"></i> Detail</button></a>
             </div>
                 <div class="col-lg-3">
                   <h4>Game anak 4</h4>
@@ -46,7 +46,7 @@
                <p>anak cerdas latihan dirumah</p>
                <br>Rp. 50.000
 
-                 <a href="{{route('showproductdetail')}}"><button type="button" class="btn btn-default" ><i class="fa fa-plus"></i> Detail</button></a>
+                 <a href="{{route('detailproductbaru')}}"><button type="button" class="btn btn-default" ><i class="fa fa-plus"></i> Detail</button></a>
             </div>
         </div>   <div class="row">
             <div class="col-lg-3">
@@ -55,7 +55,7 @@
                <p>beranda anak</p>
                <br>Rp. 50.000
 
-                 <a href="{{route('showproductdetail')}}"><button type="button" class="btn btn-default" ><i class="fa fa-plus"></i> Detail</button></a>
+                 <a href="{{route('detailproductbaru')}}"><button type="button" class="btn btn-default" ><i class="fa fa-plus"></i> Detail</button></a>
             </div>
             <div class="col-lg-3">
                    <h4>Game anak 6</h4>
@@ -63,7 +63,7 @@
                <p>anak mandiri aku baik banget</p>
                <br>Rp. 50.000
 
-                 <a href="{{route('showproductdetail')}}"><button type="button" class="btn btn-default" ><i class="fa fa-plus"></i> Detail</button></a>
+                 <a href="{{route('detailproductbaru')}}"><button type="button" class="btn btn-default" ><i class="fa fa-plus"></i> Detail</button></a>
             </div>
             <div class="col-lg-3">
                 <h4>Game anak 7</h4>
@@ -71,7 +71,7 @@
                <p>cermatika</p>
                <br>Rp. 50.000
 
-                 <a href="{{route('showproductdetail')}}"><button type="button" class="btn btn-default" ><i class="fa fa-plus"></i> Detail</button></a>
+                 <a href="{{route('detailproductbaru')}}"><button type="button" class="btn btn-default" ><i class="fa fa-plus"></i> Detail</button></a>
             </div>
                 <div class="col-lg-3">
                 <h4>Game anak 8</h4>
@@ -79,7 +79,7 @@
                <p>belanja cerdas untuk anak</p>
                <br>Rp. 50.000
 
-               <a href="{{route('showproductdetail')}}"><button type="button" class="btn btn-default" ><i class="fa fa-plus"></i> Detail</button></a>
+               <a href="{{route('detailproductbaru')}}"><button type="button" class="btn btn-default" ><i class="fa fa-plus"></i> Detail</button></a>
             </div>
         </div>
 

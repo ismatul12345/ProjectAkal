@@ -22,7 +22,7 @@
 
      <div class="panel panel-default">
 
-         <div class="panel-heading">Login</div>
+         <div class="panel-heading">Masuk</div>
 
 
          <div class="panel-body">
