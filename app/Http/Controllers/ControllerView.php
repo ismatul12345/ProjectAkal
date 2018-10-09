@@ -3,27 +3,35 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
+use App\Product;
 class ControllerView extends Controller
 {
 
     public function index()
     {
-    	$page = 'Index';//nama view atau blade yg tadi dibuat
-
-    	  return view($page);
+    	$page = 'index';//nama view atau blade yg tadi dibuat
+      $data = Product::all();
+ return view($page)->with(compact('data'));
     }
 
-    public function productDetail()
+    public function detailproduct($id)
     {
-    	$page = 'productdetail';//nama view atau blade yg tadi dibuat edit lsh m
+        $page='productdetail';
+        $data = Product::findOrFail($id);
+        return view($page)->with(compact('data'));
 
-    	  return view($page);
     }
+
     public function beli()
     {
         $page ='beli';
-        return view($page);
+        if(Session::get('login')){
+          return view ($page);
+        }else {
+          return view('masuk');
+        }
     }
     public function daftar()
     {
@@ -37,13 +45,25 @@ class ControllerView extends Controller
     }
     public function homePage()
     {
-        $page ='homepage';
-        return view ($page);
+      $page ='homepage';
+      if(Session::get('login')){
+        $data = Product::all();
+        return view($page)->with(compact('data'));
+
+      }else {
+        return view('masuk');
+      }
+
     }
-    public function detailproductBaru()
+    public function detailproductBaru($id)
     {
         $page='detailproductbaru';
-        return view ($page);
+        if(Session::get('login')){
+          $data = Product::findOrFail($id);
+          return view($page)->with(compact('data'));
+        }else {
+          return view('masuk');
+        }
     }
 
 }

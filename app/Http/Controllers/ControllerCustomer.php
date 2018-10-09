@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Customer;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class ControllerCustomer extends Controller
 {
@@ -39,6 +41,7 @@ class ControllerCustomer extends Controller
         $data = Customer::where('email', $email)// query dengan where jika email yg ada di tabel customer
             ->where('password', $password)->first();// dengan yg di request oleh user sama
       if(count($data) > 0){ //disini di cek ada ngga data yg sama jika ada maka masuk ke route show index
+        Session::put('login',TRUE);
         return redirect()->route('showhomepage')->with('alert',  'Login Success');
 
       }
@@ -53,16 +56,10 @@ class ControllerCustomer extends Controller
     }
 
     public function logout(Request $request){
-        $this->guard()->logout();
-        $request->session()->flush();
-
-        return redirect('/login');
+      Session::flush();
+        return redirect('masuk')->with('alert','Kamu sudah logout');
     }
 
-    protected function guard()
-    {
-        return Auth::guard();
-    }
 
 
 }

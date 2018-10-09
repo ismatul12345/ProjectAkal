@@ -29,7 +29,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('index', 'ControllerView@index')->name('showindex');
-Route::get('productdetail', 'ControllerView@productdetail')->name('showproductdetail');
+Route::get('detailproduct/{id}', 'ControllerView@detailproduct')->name('detailproduct');
 Route::get('beli', 'ControllerView@beli')->name('showbeli');
 Route::get('daftar', 'ControllerView@daftar')->name('showdaftar');
 Route::get('masuk', 'ControllerView@masuk')->name('showmasuk');
@@ -37,4 +37,5 @@ Route::post('register', 'ControllerCustomer@daftar')->name('daftar');
 Route::post('login', 'ControllerCustomer@doLogin')->name('masuk');
 Route::get('refresh_captcha', 'ControllerCustomer@refreshCaptcha')->name('refresh_captcha');
 Route::get('homepage', 'ControllerView@homepage')->name('showhomepage');
-Route::get('detailproductbaru', 'ControllerView@detailproductbaru')->name('detailproductbaru');
+Route::get('detailproductbaru/{id}', 'ControllerView@detailproductbaru')->name('detailproductbaru');
+Route::get('logout', 'ControllerCustomer@logout')->name('logout');

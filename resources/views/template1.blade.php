@@ -27,6 +27,9 @@
  </div>
  <button type="submit" class="btn btn-default">Cari</button>
  </form>
+ <ul class="nav navbar-nav navbar-right">
+ <li><a href="{{route('logout')}}">Logout</a></li>
+ </ul>
  </li>
  </ul>
  </div><!-- /.navbar-collapse -->
